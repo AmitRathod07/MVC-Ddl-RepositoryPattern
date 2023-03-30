@@ -1,0 +1,18 @@
+﻿@model IEnumerable<MVC_Ddl_RepositoryPattern.Models.Country>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>How to Bind Data From Database Into Dropdownlist In MVC Using Repository Pattern</h2>
+<br />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DropDownList("countries", ViewBag.countrynames as SelectList,"-- Select Country--", new { style = "width:180px" })
+        </th>
+        <th></th>
+    </tr>
+
+</table>

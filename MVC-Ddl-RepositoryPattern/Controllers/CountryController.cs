@@ -21,7 +21,9 @@ namespace MVC_Ddl_RepositoryPattern.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var countrylist = icou.GetCountry().ToList();
+            ViewBag.Countrynames = new SelectList(countrylist, "Cid", "Cname"); 
+            return View(countrylist);
         }
     }
 }
